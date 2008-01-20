@@ -1,3 +1,5 @@
+Case à coché transparent et personnalisable (coche standard et image)
+
 UpDown avec Integer au lieu de SmallInteger
 TreeView sorted
 HideString (objet contenant TStringList)

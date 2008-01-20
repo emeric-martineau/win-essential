@@ -26,19 +26,6 @@ TWinButton is a Button that admits a bitmap. This button descends from windows b
 new windows XP look if using
 
 
-INSTALLATION: (delphi 6)
-------------------------
-
-Unzip WinButton.zip
-
-Open Delphi 6, select Components->Install Component
-
-Browse for WinButton.pas in "Unit name"
-
-Press "Ok" button and then press "Compile" button
-
-It will be installed in "Win32" tab
-
 
 USE:
 ----

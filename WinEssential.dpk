@@ -34,6 +34,6 @@ contains
   WinButton in 'WinButton.pas',
   WinXPTheme in 'WinXPTheme.pas',
   MoveAndResize in 'MoveAndResize.pas';
-  AdvancedListView in 'AdvancedListView.pas'
-
+  AdvancedListView in 'AdvancedListView.pas' ;
+  MovableAndResisablePanel in 'MovableAndResisablePanel.pas';
 end.

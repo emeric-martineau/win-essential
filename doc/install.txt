@@ -1,0 +1,9 @@
+
+INSTALLATION: (delphi 6)
+------------------------
+
+Unzip WinEssential.zip
+
+Double-click on WinEssential.dpk
+
+It will be installed in "WinEssential" tab
