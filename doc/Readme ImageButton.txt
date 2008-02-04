@@ -1,14 +1,13 @@
 TWinButton
 by MARTINEAU Emeric
 Version 1.3
-Jan - 19, 2008
+Jan - 28, 2008
 this component is Freeware
 
 DESCRIPTION:
 ------------
 
-TWinButton is a Button that admits a bitmap. This button descends from windows buttons so it takes
-new windows XP look if using
+TImageButton is an advance graphic button.
 
 
 NEW PROPERTIES:
@@ -23,9 +22,6 @@ NEW PROPERTIES:
 * ImageButton
   Normal image
 
-* ImageDisabled
-  Disable image
-
 * ImageMouseOver
   Mouse over image
 
@@ -38,3 +34,40 @@ NEW PROPERTIES:
 
 * Clipping
   If set, button chang only when mouse are not over transparent color.
+
+* Caption
+
+* ShowCaption
+
+* Rect
+  Rectangle to limit show caption. By defaut, rect is width/heigh - image. If Left or Right or Bottom or Top different to -1, it's use.
+
+* WordWrap
+
+* Font
+  Font caption in standard/disable mode
+
+* HotFont
+  Font caption in mouse over mode
+
+* OnEnter
+  Call if control have focus
+
+* OnExit
+  Call if lost focus
+
+* OnMouseEnter
+  Call when mouse enter in control
+
+* OnMouseExit
+  Call when mouse exit control
+
+* ShowFocus
+  Display text in focus mode
+
+* BackGroundFocusColor
+  Background color of text in focus mode. If si TrasparentColor, no backgroundcolor. By default clHotLight.
+
+* TextFocusColor
+  Text color in focus mode. By default clHighlightText
+

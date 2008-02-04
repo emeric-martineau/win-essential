@@ -4,7 +4,8 @@ uses
   Forms,
   TestSuperBouton in 'TestSuperBouton.pas' {Form1},
   WinButton in '..\WinButton.pas',
-  WinXPTheme in '\..\WinXPTheme.pas' ;
+  WinXPTheme in '..\WinXPTheme.pas',
+  MoveAndResize in '..\MoveAndResize.pas' ;
 
 {$R *.res}
 

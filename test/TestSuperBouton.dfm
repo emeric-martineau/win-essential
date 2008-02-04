@@ -34,7 +34,7 @@ object Form1: TForm1
   end
   object TreeView1: TTreeView
     Left = 264
-    Top = 176
+    Top = 152
     Width = 121
     Height = 97
     Indent = 19

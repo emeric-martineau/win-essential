@@ -3,7 +3,8 @@ program Test;
 uses
   Forms,
   TestSuperBouton in 'TestSuperBouton.pas' {Form1},
-  WinButton in '..\WinButton.pas';
+  WinButton in '..\WinButton.pas',
+  WinXPTheme in '..\WinXPTheme.pas' ;
 
 {$R *.res}
 

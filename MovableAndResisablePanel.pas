@@ -95,7 +95,6 @@ type
     property OnCanResize;
     property OnClick;
     property OnConstrainedResize;
-    property OnContextPopup;
     property OnDockDrop;
     property OnDockOver;
     property OnDblClick;
@@ -113,7 +112,10 @@ type
     property OnStartDock;
     property OnStartDrag;
     property OnUnDock;
-    //
+    { DELPHI 6 PROPERTY }
+    {$IFDEF VER140}
+    property OnContextPopup;
+    {$ENDIF}
     property SizeBorderOfObliqueArrow : Integer read FSizeBorderOfObliqueArrow write FSizeBorderOfObliqueArrow default 5 ;
     property HeightResizable : Boolean read FHeightResizable write FHeightResizable default true ;
     property WidthResizable : Boolean read FWidthResizable write FWidthResizable default true ;
@@ -398,7 +400,6 @@ procedure TMovableAndResisablePanel.MouseDown(Button: TMouseButton; Shift: TShif
 var
   Action: Integer;
   Msg: TMessage;
-  P : TPoint ;
 begin
     { Si on est sur la bordure et qu'on clique, cette fonction est appelée et
       le controle est déplacé alors qu'on veut qu'il soit redimensionné }

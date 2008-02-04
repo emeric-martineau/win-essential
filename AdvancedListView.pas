@@ -36,6 +36,8 @@ uses
   Windows, Messages, SysUtils, Classes, Controls, ComCtrls, Graphics, CommCtrl,
   ExtCtrls, Registry ;
 
+{$I DelphiVersion.inc}
+
 const
   cShade = $F7F7F7;
   { for display arrow }
@@ -171,7 +173,6 @@ type
     property HideSelection;
     property HotTrack;
     property HotTrackStyles;
-    property HoverTime;
     property IconOptions;
     property Items;
     property LargeImages;
@@ -186,7 +187,6 @@ type
     property ParentShowHint;
     property PopupMenu;
     property ShowColumnHeaders;
-    property ShowWorkAreas;
     property ShowHint;
     property SmallImages;
     property SortType;
@@ -195,17 +195,11 @@ type
     property TabStop default True;
     property ViewStyle;
     property Visible;
-    property OnAdvancedCustomDraw;
-    property OnAdvancedCustomDrawItem;
-    property OnAdvancedCustomDrawSubItem;
     property OnChange;
     property OnChanging;
     property OnClick;
     property OnColumnClick;
-    property OnColumnDragged;
-    property OnColumnRightClick;
     property OnCompare;
-    property OnContextPopup;
     property OnCustomDraw;
     property OnCustomDrawItem;
     property OnCustomDrawSubItem;
@@ -223,10 +217,8 @@ type
     property OnEnter;
     property OnExit;
     property OnGetImageIndex;
-    property OnGetSubItemImage;
     property OnDragDrop;
     property OnDragOver;
-    property OnInfoTip;
     property OnInsert;
     property OnKeyDown;
     property OnKeyPress;
@@ -238,6 +230,19 @@ type
     property OnSelectItem;
     property OnStartDock;
     property OnStartDrag;
+    { DELPHI 6 PROPERTY }
+    {$IFDEF Delphi6}
+    property OnContextPopup;
+    property OnColumnDragged;
+    property OnColumnRightClick;
+    property OnAdvancedCustomDraw;
+    property OnAdvancedCustomDrawItem;
+    property OnAdvancedCustomDrawSubItem;
+    property ShowWorkAreas;
+    property HoverTime;
+    property OnGetSubItemImage;
+    property OnInfoTip;
+    {$ENDIF}
     { AdvancedListView property }
     property ColorImpair : TColor read FColor1 write SetColor1 default clWindow ;
     property ColorPair : TColor read FColor2 write SetColor2 default cShade ;

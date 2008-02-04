@@ -34,6 +34,9 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, StdCtrls,
   Menus, ExtCtrls;
+
+{$I DelphiVersion.inc}
+
 type
     TWinButtonLayout = (wbBitmapTop, wbBitmapBottom, wbBitmapLeft, wbBitmapRight);
 
@@ -104,8 +107,10 @@ type
       property Font ;
       property Height ;
       property HelpContext ;
+      {$IFDEF Delphi6}
       property HelpKeyword ;
       property HelpType ;
+      {$ENDIF}
       property Hint ;
       property Left ;
       property ModalResult ;

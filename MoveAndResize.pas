@@ -30,9 +30,15 @@ unit MoveAndResize;
 
 interface
 
+{$I DelphiVersion.inc}
+
 uses
   Windows, Messages, SysUtils, Classes, ExtCtrls, Controls, Graphics, StdCtrls,
-  Forms;
+  Forms
+  {$IFDEF Delphi6}
+  , TypInfo
+  {$ENDIF}
+  ;
 
 type
   TMoveAndResize = class(TWinControl)
@@ -326,8 +332,18 @@ begin
                 // Charge les curseurs
                 ShowCursor ;
                 // Met notre gestionnaire de souris
-                FOriginalOnMouseDown :=  TButton(FControl).OnMouseDown ;
-                FOriginalOnMouseMove :=  TButton(FControl).OnMouseMove ;
+				{$IFDEF Delphi6}
+                if IsPublishedProp(FControl, 'OnMouseDown')
+                then
+				{$ENDIF}
+                    FOriginalOnMouseDown :=  TButton(FControl).OnMouseDown ;
+
+				{$IFDEF Delphi6}	
+                if IsPublishedProp(FControl, 'OnMouseMove')
+                then
+				{$ENDIF}
+                    FOriginalOnMouseMove :=  TButton(FControl).OnMouseMove ;
+
                 TButton(FControl).OnMouseDown := MyMouseDown ;
                 TButton(FControl).OnMouseMove := MyMouseMove ;
                 OldCursor := FControl.Cursor ;
