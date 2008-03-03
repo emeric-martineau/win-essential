@@ -29,7 +29,7 @@ NEW PROPERTIES:
 
 * CustumStyle
   ctNone  : like a classic ListView
-  ctColum : Change lolor of column
+  ctColum : Change color of column
   ctLine  : Change color of line
   ctFixedImageBackGround : Display fixed picture in background (Work only when Theme of
                            windows run)

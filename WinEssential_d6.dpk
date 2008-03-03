@@ -39,6 +39,7 @@ contains
   WinButton in 'WinButton.pas',
   WinXPTheme in 'WinXPTheme.pas'
   CPUID in 'CPUID.pas,
-  AdvancedProgressBar in 'AdvancedProgressBar.pas'
+  AdvancedProgressBar in 'AdvancedProgressBar.pas',
+  IE7Edit in 'IE7Edit.pas'
   ;
 end.
